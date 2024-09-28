@@ -9,9 +9,7 @@ const getLocale = (req) => {
   const acceptedLanguage = req.headers.get("Accept-Language") ?? undefined;
   let headers = { "accept-language": acceptedLanguage };
   let languages = new Negotiator({ headers }).languages();
-
-  console.log(acceptedLanguage, headers, languages);
-
+  console.log("Browser Language:", languages);
   return match(languages, locales, defaultLocale);
 };
 
