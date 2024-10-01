@@ -1,9 +1,7 @@
+import PhotoDetail from "@/components/PhotoDetail";
 
+const PhotoDetailsPage = ({ params: { id, lang } }) => {
+  return <PhotoDetail id={id} lang={lang} />;
+};
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
-}
-
-export default page
+export default PhotoDetailsPage;
